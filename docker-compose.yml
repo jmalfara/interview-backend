@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  interview-backend:
+    container_name: interview-backend
+    volumes:
+      - ./data:/root/app/data
+    environment:
+      - NODE_ENV=development
+    ports:
+      - 3002:3002
+    networks:
+      - bridge
+    restart: always
+
+networks:
+  bridge:
